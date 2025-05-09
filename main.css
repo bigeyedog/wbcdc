@@ -159,7 +159,7 @@
 .per {
   width: 65px;
   text-align: center;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .headings {
@@ -174,7 +174,7 @@
   background-color: brown;
   color: white;
   padding-left: 10px;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 #p3 {
@@ -381,9 +381,9 @@
   }
 
   .count {
-    width: 38px;
-    height: 38px;
-    margin: 8px;
+    width: 40px;
+    height: 40px;
+    margin: 6px;
     font-size: 20px;
     font-weight: 500;
   }
@@ -417,13 +417,13 @@
   .abs,
   .per {
     width: 55px;
-    font-size: 16px;
+    font-size: 15px;
   }
 
   .rowheadings {
     width: 120px;
     padding-left: 9px;
-    font-size: 16px;
+    font-size: 15px;
   }
 
   #p3 {
@@ -501,10 +501,10 @@
   }
 
   .count {
-    width: 38px;
-    height: 38px;
-    margin: 8px;
-    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    margin: 6px;
+    font-size: 18px;
     font-weight: 500;
   }
 
@@ -584,12 +584,12 @@
   .headings,
   .abs,
   .per {
-    width: 45px;
+    width: 55px;
     font-size: 14px;
   }
 
   .rowheadings {
-    width: 100px;
+    width: 120px;
     padding-left: 8px;
     font-size: 14px;
   }
@@ -669,10 +669,130 @@
   }
 
   .count {
-    width: 38px;
-    height: 38px;
+    width: 40px;
+    height: 40px;
+    margin: 6px;
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  .countTotal {
+    width: 50px;
+    height: 36px;
     margin: 8px;
     font-size: 20px;
+    font-weight: 500;
+  }
+
+  #p2 {
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  #startbutton,
+  #resetbutton,
+  #acceptbutton1,
+  #acceptbutton2,
+  #discardbutton1,
+  #discardbutton2,
+  #endbutton {
+    width: 80px;
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  .headings,
+  .abs,
+  .per {
+    width: 45px;
+    font-size: 13px;
+  }
+
+  .rowheadings {
+    width: 100px;
+    padding-left: 8px;
+    font-size: 13px;
+  }
+
+  #p3 {
+    font-size: 13px;
+  }
+
+  .name {
+    font-size: 9px;
+    font-weight: 500;
+  }
+
+  .description {
+    font-size: 9px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  #toprow {
+    height: 45px;
+  }
+
+  #title {
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  #course {
+    font-size: 9px;
+  }
+
+  .rows {
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+
+  .block1,
+  .block3 {
+    width: 10%;
+  }
+
+  .block2 {
+    width: 80%;
+  }
+
+  .left {
+    width: 650px;
+    height: 65px;
+    margin-right: 5px;
+    border-radius: 10px;
+    padding-right: 7px;
+    padding-left: 7px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+  }
+
+  .middle {
+    width: 60px;
+    height: 60px;
+    margin-left: 4px;
+  }
+
+  .right {
+    width: 60px;
+    height: 60px;
+  }
+
+  .image {
+    width: 60px;
+    height: 60px;
+  }
+
+  .addbutton {
+    width: 60px;
+    height: 60px;
+  }
+
+  .count {
+    width: 40px;
+    height: 40px;
+    margin: 6px;
+    font-size: 18px;
     font-weight: 500;
   }
 
@@ -753,17 +873,17 @@
   .abs,
   .per {
     width: 45px;
-    font-size: 14px;
+    font-size: 13px;
   }
 
   .rowheadings {
     width: 100px;
     padding-left: 8px;
-    font-size: 14px;
+    font-size: 13px;
   }
 
   #p3 {
-    font-size: 14px;
+    font-size: 12px;
   }
 
   .name {
@@ -776,34 +896,23 @@
   }
 }
 
-/* @media only screen and (max-width: 768px) {
+@media only screen and (max-width: 380px) {
   #toprow {
     height: 45px;
   }
 
-  #topleft,
-  #topright {
-    width: 25%;
-  }
-
-  #L1,
-  #R1 {
-    font-size: 11px;
-    font-weight: 500;
-  }
-
-  #topmiddle {
-    width: 50%;
-  }
-
   #title {
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 700;
   }
 
+  #course {
+    font-size: 9px;
+  }
+
   .rows {
-    margin-top: 5px;
-    margin-bottom: 5px;
+    margin-top: 8px;
+    margin-bottom: 8px;
   }
 
   .block1,
@@ -817,139 +926,56 @@
 
   .left {
     width: 650px;
-    height: 45px;
-    margin-right: 3px;
-    border-radius: 5px;
-    padding-right: 5px;
-    padding-left: 5px;
-    padding-top: 2px;
-    padding-bottom: 2px;
+    height: 65px;
+    margin-right: 5px;
+    border-radius: 10px;
+    padding-right: 7px;
+    padding-left: 7px;
+    padding-top: 3px;
+    padding-bottom: 3px;
   }
 
   .middle {
-    width: 45px;
-    height: 45px;
-    margin-left: 3px;
+    width: 60px;
+    height: 60px;
+    margin-left: 4px;
   }
 
   .right {
-    width: 45px;
-    height: 45px;
+    width: 60px;
+    height: 60px;
   }
 
   .image {
-    width: 45px;
-    height: 45px;
+    width: 60px;
+    height: 60px;
   }
 
   .addbutton {
-    width: 45px;
-    height: 45px;
+    width: 60px;
+    height: 60px;
   }
 
   .count {
-    width: 29px;
-    height: 29px;
+    width: 40px;
+    height: 40px;
     margin: 6px;
-    font-size: 15px;
+    font-size: 18px;
     font-weight: 500;
   }
 
   .countTotal {
-    width: 40px;
-    height: 29px;
-    margin: 6px;
-    font-size: 15px;
+    width: 50px;
+    height: 36px;
+    margin: 8px;
+    font-size: 20px;
     font-weight: 500;
   }
 
-  #p2 {
-    font-size: 15px;
-    font-weight: 500;
-  }
-
-  #startbutton,
-  #resetbutton,
-  #acceptbutton1,
-  #acceptbutton2,
-  #discardbutton1,
-  #discardbutton2,
-  #endbutton {
-    width: 80px;
-    font-size: 17px;
-    font-weight: 500;
-  }
-
-  .headings,
-  .abs,
-  .per {
-    width: 35px;
-    font-size: 12px;
-  }
-
-  .rowheadings {
-    width: 100px;
-    padding-left: 6px;
-    font-size: 12px;
-  }
-
-  #p3 {
-    font-size: 12px;
-  }
-
-  .name {
-    font-size: 8px;
-    font-weight: 500;
-  }
-
-  .description {
-    font-size: 8px;
-  }
-}
-
-@media only screen and (max-width: 576px) {
-  #toprow {
-    height: 35px;
-  }
-
-  #topleft,
-  #topright {
-    width: 25%;
-  }
-
-  #L1,
-  #R1 {
-    font-size: 9px;
-    font-weight: 500;
-  }
-
-  #topmiddle {
-    width: 50%;
-  }
-
-  #title {
-    font-size: 16px;
-    font-weight: 700;
-  }
-
-  .rows {
-    margin-top: 3px;
-    margin-bottom: 3px;
-  }
-
-  .block1,
-  .block3 {
-    width: 5%;
-  }
-
-  .block2 {
-    width: 90%;
-  }
-
-  .left {
-    width: 700px;
-    height: 30px;
-    margin-right: 3px;
+  /* .left {
+    width: 600px;
+    height: 50px;
+    margin-right: 5px;
     border-radius: 5px;
     padding-right: 4px;
     padding-left: 4px;
@@ -958,44 +984,44 @@
   }
 
   .middle {
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 50px;
     margin-left: 3px;
   }
 
   .right {
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 50px;
   }
 
   .image {
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 50px;
   }
 
   .addbutton {
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 50px;
   }
 
   .count {
-    width: 19px;
-    height: 19px;
+    width: 32px;
+    height: 32px;
     margin: 4px;
-    font-size: 10px;
+    font-size: 18px;
     font-weight: 500;
   }
 
   .countTotal {
-    width: 30px;
-    height: 22px;
+    width: 50px;
+    height: 36px;
     margin: 4px;
-    font-size: 10px;
+    font-size: 18px;
     font-weight: 500;
-  }
+  } */
 
   #p2 {
-    font-size: 10px;
+    font-size: 18px;
     font-weight: 500;
   }
 
@@ -1007,25 +1033,25 @@
   #discardbutton2,
   #endbutton {
     width: 80px;
-    font-size: 14px;
+    font-size: 18px;
     font-weight: 500;
   }
 
   .headings,
   .abs,
   .per {
-    width: 25px;
-    font-size: 10px;
+    width: 40px;
+    font-size: 13px;
   }
 
   .rowheadings {
     width: 100px;
-    padding-left: 4px;
-    font-size: 10px;
+    padding-left: 5px;
+    font-size: 13px;
   }
 
   #p3 {
-    font-size: 10px;
+    font-size: 13px;
   }
 
   .name {
@@ -1036,4 +1062,4 @@
   .description {
     font-size: 7px;
   }
-} */
+}
