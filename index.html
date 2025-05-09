@@ -304,7 +304,7 @@
             </tr>
 
             <tr id="tablerow3" style="visibility: hidden">
-              <td class="rowheadings">Avg Count/%</td>
+              <td class="rowheadings">Avg</td>
               <td>
                 <input type="text" class="per" id="counter1row3" readonly />
               </td>
@@ -465,7 +465,7 @@
 
       function accept1() {
         storeCount1();
-        populateTableData1();
+        // populateTableData1();
         $("#count1div").css("display", "flex");
         $("#buttonrow3").css("display", "none");
         $("#buttonrow1").css("display", "flex");
@@ -479,7 +479,7 @@
 
       function accept2() {
         storeCount2();
-        populateTableData2();
+        // populateTableData2();
         $("#count1div, #buttonrow5").css("display", "flex");
         $("#tablerow2, #tablerow3, #tablerow4").css("visibility", "visible");
         $("#buttonrow1, #buttonrow4, #totalcountdiv").css("display", "none");
@@ -523,15 +523,68 @@
       function end() {
         $("#buttonrow1").css("display", "flex");
         $("#endbutton, #count1div").css("display", "none");
+        $("#tablerow2, #tablerow3").css("visibility", "hidden");
         $(".addbutton").prop("disabled", true);
         $(
           "#counter1, #counter2, #counter3, #counter4, #counter5, #totalCounter"
         ).val("");
-        sessionStorage.clear();
+
+        $("#counter1row1").val("");
+        $("#counter2row1").val("");
+        $("#counter3row1").val("");
+        $("#counter4row1").val("");
+        $("#counter5row1").val("");
+        $("#counter1row2").val("");
+        $("#counter2row2").val("");
+        $("#counter3row2").val("");
+        $("#counter4row2").val("");
+        $("#counter5row2").val("");
+        $("#counter1row3").val("");
+        $("#counter2row3").val("");
+        $("#counter3row3").val("");
+        $("#counter4row3").val("");
+        $("#counter5row3").val("");
+        // sessionStorage.clear();
       }
     </script>
 
     <script>
+      // function storeCount1() {
+      //   const counter1value = Number($("#counter1").val());
+      //   const counter2value = Number($("#counter2").val());
+      //   const counter3value = Number($("#counter3").val());
+      //   const counter4value = Number($("#counter4").val());
+      //   const counter5value = Number($("#counter5").val());
+
+      //   const count1abs = {
+      //     neuCountabs: counter1value,
+      //     lymCountabs: counter2value,
+      //     monCountabs: counter3value,
+      //     eosCountabs: counter4value,
+      //     basCountabs: counter5value,
+      //   };
+
+      //   sessionStorage.setItem("count1abs", JSON.stringify(count1abs));
+      // }
+
+      // function storeCount2() {
+      //   const counter1value = Number($("#counter1").val());
+      //   const counter2value = Number($("#counter2").val());
+      //   const counter3value = Number($("#counter3").val());
+      //   const counter4value = Number($("#counter4").val());
+      //   const counter5value = Number($("#counter5").val());
+
+      //   const count2abs = {
+      //     neuCountabs: counter1value,
+      //     lymCountabs: counter2value,
+      //     monCountabs: counter3value,
+      //     eosCountabs: counter4value,
+      //     basCountabs: counter5value,
+      //   };
+
+      //   sessionStorage.setItem("count2abs", JSON.stringify(count2abs));
+      // }
+
       function storeCount1() {
         const counter1value = Number($("#counter1").val());
         const counter2value = Number($("#counter2").val());
@@ -539,15 +592,11 @@
         const counter4value = Number($("#counter4").val());
         const counter5value = Number($("#counter5").val());
 
-        const count1abs = {
-          neuCountabs: counter1value,
-          lymCountabs: counter2value,
-          monCountabs: counter3value,
-          eosCountabs: counter4value,
-          basCountabs: counter5value,
-        };
-
-        sessionStorage.setItem("count1abs", JSON.stringify(count1abs));
+        $("#counter1row1").val(counter1value);
+        $("#counter2row1").val(counter2value);
+        $("#counter3row1").val(counter3value);
+        $("#counter4row1").val(counter4value);
+        $("#counter5row1").val(counter5value);
       }
 
       function storeCount2() {
@@ -557,52 +606,75 @@
         const counter4value = Number($("#counter4").val());
         const counter5value = Number($("#counter5").val());
 
-        const count2abs = {
-          neuCountabs: counter1value,
-          lymCountabs: counter2value,
-          monCountabs: counter3value,
-          eosCountabs: counter4value,
-          basCountabs: counter5value,
-        };
+        $("#counter1row2").val(counter1value);
+        $("#counter2row2").val(counter2value);
+        $("#counter3row2").val(counter3value);
+        $("#counter4row2").val(counter4value);
+        $("#counter5row2").val(counter5value);
 
-        sessionStorage.setItem("count2abs", JSON.stringify(count2abs));
-      }
+        const neuAvg =
+          (Number($("#counter1row1").val()) +
+            Number($("#counter1row2").val())) /
+          2;
+        const lymAvg =
+          (Number($("#counter2row1").val()) +
+            Number($("#counter2row2").val())) /
+          2;
+        const monAvg =
+          (Number($("#counter3row1").val()) +
+            Number($("#counter3row2").val())) /
+          2;
+        const eosAvg =
+          (Number($("#counter4row1").val()) +
+            Number($("#counter4row2").val())) /
+          2;
+        const basAvg =
+          (Number($("#counter5row1").val()) +
+            Number($("#counter5row2").val())) /
+          2;
 
-      function populateTableData1() {
-        const count1abs = JSON.parse(sessionStorage.getItem("count1abs"));
-        $("#counter1row1").val(count1abs.neuCountabs);
-        $("#counter2row1").val(count1abs.lymCountabs);
-        $("#counter3row1").val(count1abs.monCountabs);
-        $("#counter4row1").val(count1abs.eosCountabs);
-        $("#counter5row1").val(count1abs.basCountabs);
-      }
-
-      function populateTableData2() {
-        const count1abs = JSON.parse(sessionStorage.getItem("count1abs"));
-        const count2abs = JSON.parse(sessionStorage.getItem("count2abs"));
-
-        const neuAvg = (count1abs.neuCountabs + count2abs.neuCountabs) / 2;
-        const lymAvg = (count1abs.lymCountabs + count2abs.lymCountabs) / 2;
-        const monAvg = (count1abs.monCountabs + count2abs.monCountabs) / 2;
-        const eosAvg = (count1abs.eosCountabs + count2abs.eosCountabs) / 2;
-        const basAvg = (count1abs.basCountabs + count2abs.basCountabs) / 2;
-
-        $("#counter1row1").val(count1abs.neuCountabs);
-        $("#counter2row1").val(count1abs.lymCountabs);
-        $("#counter3row1").val(count1abs.monCountabs);
-        $("#counter4row1").val(count1abs.eosCountabs);
-        $("#counter5row1").val(count1abs.basCountabs);
-        $("#counter1row2").val(count2abs.neuCountabs);
-        $("#counter2row2").val(count2abs.lymCountabs);
-        $("#counter3row2").val(count2abs.monCountabs);
-        $("#counter4row2").val(count2abs.eosCountabs);
-        $("#counter5row2").val(count2abs.basCountabs);
         $("#counter1row3").val(neuAvg);
         $("#counter2row3").val(lymAvg);
         $("#counter3row3").val(monAvg);
         $("#counter4row3").val(eosAvg);
         $("#counter5row3").val(basAvg);
       }
+
+      // function populateTableData1() {
+      //   const count1abs = JSON.parse(sessionStorage.getItem("count1abs"));
+      //   $("#counter1row1").val(count1abs.neuCountabs);
+      //   $("#counter2row1").val(count1abs.lymCountabs);
+      //   $("#counter3row1").val(count1abs.monCountabs);
+      //   $("#counter4row1").val(count1abs.eosCountabs);
+      //   $("#counter5row1").val(count1abs.basCountabs);
+      // }
+
+      // function populateTableData2() {
+      //   const count1abs = JSON.parse(sessionStorage.getItem("count1abs"));
+      //   const count2abs = JSON.parse(sessionStorage.getItem("count2abs"));
+
+      //   const neuAvg = (count1abs.neuCountabs + count2abs.neuCountabs) / 2;
+      //   const lymAvg = (count1abs.lymCountabs + count2abs.lymCountabs) / 2;
+      //   const monAvg = (count1abs.monCountabs + count2abs.monCountabs) / 2;
+      //   const eosAvg = (count1abs.eosCountabs + count2abs.eosCountabs) / 2;
+      //   const basAvg = (count1abs.basCountabs + count2abs.basCountabs) / 2;
+
+      //   $("#counter1row1").val(count1abs.neuCountabs);
+      //   $("#counter2row1").val(count1abs.lymCountabs);
+      //   $("#counter3row1").val(count1abs.monCountabs);
+      //   $("#counter4row1").val(count1abs.eosCountabs);
+      //   $("#counter5row1").val(count1abs.basCountabs);
+      //   $("#counter1row2").val(count2abs.neuCountabs);
+      //   $("#counter2row2").val(count2abs.lymCountabs);
+      //   $("#counter3row2").val(count2abs.monCountabs);
+      //   $("#counter4row2").val(count2abs.eosCountabs);
+      //   $("#counter5row2").val(count2abs.basCountabs);
+      //   $("#counter1row3").val(neuAvg);
+      //   $("#counter2row3").val(lymAvg);
+      //   $("#counter3row3").val(monAvg);
+      //   $("#counter4row3").val(eosAvg);
+      //   $("#counter5row3").val(basAvg);
+      // }
     </script>
 
     <script>
