@@ -1,8 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="This is an online WBC differential counter for the 5 major types of white blood cells, including neutrophils, lymphocytes, monocytes, eosinophils and basophils, used during microscopic examination of a blood film in a clinical lab, in replacement of a physical WBC counter."
+    />
+
     <title>Main</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -693,7 +698,7 @@
             counter2value +
             counter3value +
             counter4value +
-            counter5value
+            counter5value,
         );
       }
 
@@ -719,7 +724,7 @@
         $("#totalcountdiv").css("display", "none");
         $(".addbutton, .minusbutton").prop("disabled", true);
         $(
-          "#counter1, #counter2, #counter3, #counter4, #counter5, #totalCounter"
+          "#counter1, #counter2, #counter3, #counter4, #counter5, #totalCounter",
         ).val("");
       }
 
@@ -731,13 +736,13 @@
         $("#buttonrow1, #buttonrow4, #totalcountdiv").css("display", "none");
         $(".addbutton, .minusbutton").prop("disabled", true);
         $(
-          "#counter1, #counter2, #counter3, #counter4, #counter5, #totalCounter"
+          "#counter1, #counter2, #counter3, #counter4, #counter5, #totalCounter",
         ).val("");
       }
 
       function discard1() {
         $(
-          "#counter1, #counter2, #counter3, #counter4, #counter5, #totalCounter"
+          "#counter1, #counter2, #counter3, #counter4, #counter5, #totalCounter",
         ).val(0);
         $("#buttonrow3").css("display", "none");
         $("#buttonrow2").css("display", "flex");
@@ -746,7 +751,7 @@
 
       function discard2() {
         $(
-          "#counter1, #counter2, #counter3, #counter4, #counter5, #totalCounter"
+          "#counter1, #counter2, #counter3, #counter4, #counter5, #totalCounter",
         ).val(0);
         $("#buttonrow4").css("display", "none");
         $("#totalcountdiv").css("display", "flex");
@@ -762,7 +767,7 @@
         $("#instruction").css("display", "none");
         $(".addbutton, .minusbutton, #resetbutton").prop("disabled", false);
         $(
-          "#counter1, #counter2, #counter3, #counter4, #counter5, #totalCounter"
+          "#counter1, #counter2, #counter3, #counter4, #counter5, #totalCounter",
         ).val(0);
       }
 
@@ -772,7 +777,7 @@
         $("#tablerow2, #tablerow3").css("visibility", "hidden");
         $(".addbutton, .minusbutton").prop("disabled", true);
         $(
-          "#counter1, #counter2, #counter3, #counter4, #counter5, #totalCounter"
+          "#counter1, #counter2, #counter3, #counter4, #counter5, #totalCounter",
         ).val("");
 
         $("#counter1row1").val("");
@@ -856,7 +861,7 @@
         .getElementById("resetbutton")
         .addEventListener("click", function () {
           $(
-            "#counter1, #counter2, #counter3, #counter4, #counter5, #totalCounter"
+            "#counter1, #counter2, #counter3, #counter4, #counter5, #totalCounter",
           ).val(0);
         });
     </script>
